@@ -1,7 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
 name: CI
-...
+on:
+  push:
+    branches:
+    - '*'
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
